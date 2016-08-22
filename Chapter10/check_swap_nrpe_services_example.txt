@@ -1,0 +1,17 @@
+define service
+{
+  use                   generic-service
+  host_name             localhost
+  service_description   SWAP
+  check_command         check_swap
+  normal_check_interval 15
+}
+define service
+{
+  use                   generic-service
+  host_name             !localhost
+  hostgroup_name        linux-servers
+  service_description   SWAP
+  check_command         check_swap_nrpe
+  normal_check_interval 30
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_redis_auth
+  command_line  $USER1$/check_tcp -H $HOSTADDRESS$ -p 6379 -E -s "AUTH $ARG1$\r\nSELECT 0\r\n" -e "+OK" -w 1 -c 2
+}

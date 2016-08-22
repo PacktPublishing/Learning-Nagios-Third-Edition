@@ -1,0 +1,4 @@
+define command {
+    command_name    notify-service-by-hipchat
+    command_line    hipsaint --token=tokenid --room=roomid --type=service --inputs="$SERVICEDESC$|$HOSTALIAS$|$LONGDATETIME$|$NOTIFICATIONTYPE$|$HOSTADDRESS$|$SERVICESTATE$|$SERVICEOUTPUT$" -n
+}

@@ -1,0 +1,7 @@
+define service
+  {
+    host_name           router2
+    service_description PING
+    check_command       check_ping_limits
+    _LIMITS             50.0,20%
+  }

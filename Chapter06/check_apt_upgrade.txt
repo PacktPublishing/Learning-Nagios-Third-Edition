@@ -1,0 +1,6 @@
+define command
+{
+  command_name  check_apt_upgrade
+  command_line  $USER1$/check_apt -u -d
+}
+c

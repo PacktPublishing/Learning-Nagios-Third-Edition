@@ -1,0 +1,35 @@
+define service
+{
+  use                   generic-service
+  host_name             mainrouter
+  service_description   OpenVPN
+  check_command         check_openvpn_remote
+  check_interval        15
+  max_check_attempts    3
+  notification_interval 30
+  notification_period   24x7
+}
+# Escalation 1
+define serviceescalation
+{
+  host_name             mainrouter
+  service_description   OpenVPN
+  first_notification    4
+  last_notification     8
+  contactgroups         it-escalation1
+  escalation_options    w,c
+  notification_period   24x7
+  notification_interval 15
+}
+# Escalation 2
+define serviceescalation
+{
+  host_name             mainrouter
+  service_description   OpenVPN
+  first_notification    8
+  last_notification     0
+  contactgroups         it-escalation2
+  escalation_options    w,c,r
+  notification_period   24x7
+  notification_interval 120
+}

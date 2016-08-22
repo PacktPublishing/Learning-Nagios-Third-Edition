@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_smb_connect
+  command_line  $USER1$/check_disk_smb -H $HOSTADDRESS$ -w 100% -c 100% -u $ARG1$ -p $ARG2$ -s $ARG3$
+}

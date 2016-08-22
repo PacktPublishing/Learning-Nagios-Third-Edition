@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_partition
+  command_line  $USER1$/check_disk -p $ARG1$ -w $ARG2$ -c $ARG3$
+}

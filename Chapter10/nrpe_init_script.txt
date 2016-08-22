@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+### BEGIN INIT INFO
+# Provides:             nrpe
+# Required-Start:       $local_fs $syslog $network
+# Required-Stop:        $local_fs $syslog $network
+# Short-Description:    Starts and stops the NRPE server
+# Description:          Starts and stops the NRPE server
+### END INIT INFO
+
+is_running() {
+  pgrep -u nagios nrpe >/dev/null
+}
+
+case "$1" in
+  start)
+    echo -n "Starting NRPE: "
+    if ! is_running ; then
+      /opt/nagios/bin/nrpe -d -c /etc/nagios/nrpe.cfg
+    fi
+    echo "done."
+    ;;
+  stop)
+    echo -n "Stopping NRPE: "
+    if is_running ; then
+      pkill -u nagios nrpe
+      sleep 1
+      pkill -u nagios -9 nrpe
+    fi
+    echo "done."
+    ;;
+  restart)
+    $0 stop
+    sleep 2
+    $0 start
+    ;;
+  status)
+    if is_running ; then
+      echo "NRPE is running"
+      exit 0
+    else
+      echo "NRPE is NOT running"
+      exit 1
+    fi
+    ;;
+esac

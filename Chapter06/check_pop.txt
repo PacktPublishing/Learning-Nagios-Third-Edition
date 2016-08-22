@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_pop
+  command_line  $USER1$/check_pop -H $HOSTADDRESS$
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_dummy_ok
+  command_line  $USER1$/check_dummy 0
+}

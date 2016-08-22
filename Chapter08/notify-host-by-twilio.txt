@@ -1,0 +1,4 @@
+define command{
+        command_name    notify-host-by-twilio
+        command_line    echo "Nagios $NOTIFICATIONTYPE$ Host: $HOSTNAME$ State: $HOSTSTATE$" | /path/to/twilio-sms $_CONTACTSMSNUMBER$
+        }

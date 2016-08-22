@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_pop3login
+  command_line  $USER1$/check_pop -H $HOSTADDRESS$ -E -s "USER $ARG1$\r\nPASS $ARG2$\r\n" -d 5 -e "ogged in"
+}

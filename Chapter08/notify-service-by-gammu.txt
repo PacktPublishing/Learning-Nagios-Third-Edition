@@ -1,0 +1,4 @@
+define command{
+        command_name    notify-service-by-gammu
+        command_line    echo "Nagios $NOTIFICATIONTYPE$ Svc: $SERVICEDESC$ Host: $HOSTALIAS$ State: $SERVICESTATE$" | /path/to/gammu --sendsms TEXT $_CONTACTSMSNUMBER$
+        }

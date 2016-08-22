@@ -1,0 +1,12 @@
+define host
+  {
+    register               0
+    name                   generic-servers
+    check_period           24x7
+    retry_interval         1
+    check_interval         15
+    max_retry_attempts     5
+    notification_period    24x7
+    notification_interval  60
+    notification_options   d,r
+  }

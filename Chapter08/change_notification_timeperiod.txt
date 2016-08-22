@@ -1,0 +1,14 @@
+#!/bin/sh
+
+NOW='date +%s'
+CONTACT=$1-jabber
+if [ "$2,$3" = "DOWN,HARD" ] ; then
+    TP=none
+else
+    TP=24x7
+fi
+echo "[$NOW] CHANGE_CONTACT_HOST_NOTIFICATION_TIMEPERIOD;$CONTACT;$TP" \
+     >/var/nagios/rw/nagios.cmd
+echo "[$NOW] CHANGE_CONTACT_SVC_NOTIFICATION_TIMEPERIOD;$CONTACT;$TP" \
+     >/var/nagios/rw/nagios.cmd
+exit 0

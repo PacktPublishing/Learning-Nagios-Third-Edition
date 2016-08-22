@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_ftp
+  command_line  $USER1$/check_ftp -H $HOSTADDRESS$
+}

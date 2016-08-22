@@ -1,0 +1,9 @@
+define servicedependency
+  {
+    host_name                      ldapserver
+    service_description            LDAP
+    dependent_hostgroup_name       emailservers
+    dependent_service_description  POP3
+    execution_failure_criteria     c,u
+    notification_failure_criteria  c,u,w
+  }

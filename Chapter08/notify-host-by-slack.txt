@@ -1,0 +1,4 @@
+define command{
+        command_name    notify-host-by-slack
+        command_line    /usr/bin/curl -X POST --data-urlencode 'payload={"channel": "#general", "username": "Nagios", "text": "Nagios Host Notification Type: $NOTIFICATIONTYPE$ Host: $HOSTNAME$ State: $HOSTSTATE$ Address: $HOSTADDRESS$ Info: $HOSTOUTPUT$"}' WEBHOOK_URL
+        }

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_procs_cmd
+  command_line  $USER1$/check_procs -C $ARG1$ -w $ARG1$ -c $ARG2$
+}

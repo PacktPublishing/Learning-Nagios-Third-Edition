@@ -1,0 +1,21 @@
+#!/bin/sh
+
+SVC=$1
+DEVICE=$2
+TMPFILE=`mktemp`
+NOW=`date +%s`
+PREFIX="[$NOW] PROCESS_SERVICE_CHECK_RESULT;localhost;$SVC"
+
+# try to read the device
+dd bs=1M if=$DEVICE of=/dev/null >$TMPFILE 2>&1
+CODE=$?
+RESULT=`grep copied <$TMPFILE`
+rm $TMPFILE
+
+if [ $CODE == 0 ] ; then
+  echo "$PREFIX;0;$RESULT"
+else
+  echo "$PREFIX;2;Error while checking device $DEVICE"
+fi
+
+exit 0

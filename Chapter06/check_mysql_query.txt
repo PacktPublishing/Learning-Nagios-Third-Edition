@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_mysql_query
+  command_line  $USER1$/check_mysql_query –H $HOSTADDRESS$ -u $ARG1$ -p $ARG2$ -d $ARG3$ -q $ARG4$ –w $ARG5$ -c $ARG6$
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_dhcp_mac
+  command_line  $USER1$/check_dhcp -s $HOSTADDRESS$ -m $ARG1$ -r $ARG2$
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_swap_by_ssh
+  command_line  $USER1$/check_by_ssh –H $HOSTADDRESS$ –C "$USER1$/check_swap –w $ARG1$ -c $ARG2$"
+}

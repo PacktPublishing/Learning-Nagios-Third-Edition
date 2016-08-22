@@ -1,0 +1,4 @@
+define command{
+        command_name    notify-host-by-jabber
+        command_line    /path/to/notify_via_jabber $_CONTACTJABBERID$ "Nagios Host Notification Type: $NOTIFICATIONTYPE$ Host: $HOSTNAME$\nState: $HOSTSTATE$ Address: $HOSTADDRESS$ Info: $HOSTOUTPUT$ "
+        }

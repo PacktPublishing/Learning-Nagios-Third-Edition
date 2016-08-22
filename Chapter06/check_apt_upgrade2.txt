@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_apt_upgrade2
+  command_line  $USER1$/check_apt -n -u -d -c "^linux-(image|restrict)"
+}

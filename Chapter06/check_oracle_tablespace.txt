@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_oracle_tablespace
+  command_line  $USER1$/check_oracle --cache $HOSTADDRESS$/$ARG1$ $ARG2$ $ARG3$ $ARG4$ $ARG5$
+}

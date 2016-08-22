@@ -1,0 +1,12 @@
+#!/bin/sh
+
+NOW=`date +%s`
+
+echo "[$NOW] SCHEDULE_HOST_CHECK;somehost;$NOW" \
+     >/var/nagios/rw/nagios.cmd
+echo "[$NOW] SCHEDULE_HOST_SVC_CHECKS;somehost;$NOW" \
+     >/var/nagios/rw/nagios.cmd
+echo "[$NOW] SCHEDULE_SVC_CHECK;otherhost;Service Name;$NOW" \
+     >/var/nagios/rw/nagios.cmd
+
+exit 0

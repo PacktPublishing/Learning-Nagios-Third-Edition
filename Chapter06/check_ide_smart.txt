@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_ide_smart
+  command_line  $USER1$/check_ide_smart -d $ARG1$ -1 -q -n
+}

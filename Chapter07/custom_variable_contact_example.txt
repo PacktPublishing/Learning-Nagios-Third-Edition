@@ -1,0 +1,7 @@
+define contact
+  {
+    contact_name               jdoe
+    alias                      John Doe
+    host_notification_commands host-notify-by-jabber
+    _JABBERID                  jdoe@jabber.yourcompany.com
+  }

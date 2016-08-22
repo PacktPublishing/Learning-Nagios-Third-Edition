@@ -1,0 +1,7 @@
+define command
+  {
+    command_name        host-notify-by-ekg2
+    command_line        /usr/bin/printf "%b" "msg $_CONTACTEKGALIAS$ 
+                        Host $HOSTDISPLAYNAME$ changed state to 
+                        $HOSTSTATE$\n" >>~/.ekg2/.pipe
+  }

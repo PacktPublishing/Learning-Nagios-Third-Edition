@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_imaplogin
+  command_line  $USER1$/check_imap -H $HOSTADDRESS$ -E -s "pr01 LOGIN $ARG1 $ARG2$\r\n" -d 5 -e "pr01 OK"
+}

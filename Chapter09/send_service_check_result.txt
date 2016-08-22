@@ -1,0 +1,12 @@
+#!/bin/sh
+
+CLOCK=`date +%s`
+HOST=$1
+SVC=$2
+STATUS=$3
+OUTPUT=$4
+
+echo "[$CLOCK] PROCESS_SERVICE_CHECK_RESULT;$HOST;$SVC;$STATUS;
+       $OUTPUT" >/var/nagios/rw/nagios.cmd
+
+exit 0

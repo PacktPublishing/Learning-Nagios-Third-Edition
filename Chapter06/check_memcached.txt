@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_memcached
+  command_line  $USER1$/check_tcp -H $HOSTADDRESS$ -p 11211 -E -s "version\n" -e "VERSION" -w 1 -c 2
+}

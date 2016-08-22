@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_smtpsend
+  command_line  $USER1$/check_smtp -H $HOSTADDRESS$ -f "$ARG1$" –C "RCPT TO:<$ARG2$>" –R "250"
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_users
+  command_line  $USER1$/check_users -w $ARG1$ -c $ARG2$
+}

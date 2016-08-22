@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_ftplogin
+  command_line  $USER1$/check_ftp -H $HOSTADDRESS$ -E -s "USER $ARG1\r\nPASS $ARG2$\r\n" -d 5 -e "230"
+}

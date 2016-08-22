@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_nagios
+  command_line  $USER1$/check_nagios –F $ARG1$ -C $ARG2$ -e $ARG3$
+}

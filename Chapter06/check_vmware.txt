@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_vmware
+  command_line  $USER1$/check_tcp -H $HOSTADDRESS$ -p 902 -e "220 VMware"
+}

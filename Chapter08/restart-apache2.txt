@@ -1,0 +1,6 @@
+define command
+  {
+    command_name restart-apache2
+    command_line $USER1$/events/restart_apache2
+                 $SERVICESTATE$ $SERVICESTATETYPE$ $SERVICEATTEMPT$
+  }

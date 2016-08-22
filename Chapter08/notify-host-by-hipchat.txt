@@ -1,0 +1,4 @@
+define command {
+    command_name    notify-host-by-hipchat
+    command_line    hipsaint --token=tokenid --room=roomid --type=host --inputs="$HOSTNAME$|$LONGDATETIME$|$NOTIFICATIONTYPE$|$HOSTADDRESS$|$HOSTSTATE$|$HOSTOUTPUT$" -n
+}

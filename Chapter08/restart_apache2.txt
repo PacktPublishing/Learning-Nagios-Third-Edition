@@ -1,0 +1,25 @@
+#!/bin/sh
+
+ # use variables for arguments
+ SERVICESTATE=$1
+ SERVICESTATETYPE=$2
+ SERVICEATTEMPT=$3
+
+ # we don't want to restart if current status is OK
+ if [ "$SERVICESTATE" != "OK" ] ; then
+
+   # proceed only if we're in soft transition state 
+   if [ "$SERVICESTATETYPE" == "SOFT" ] ; then
+
+     # proceed only if this is 3rd attempt, restart
+     if [ "$SERVICESTATEATTEMPT" == "3" ] ; then
+
+       # restarts Apache as system administrator
+       sudo service apache2 restart
+     fi
+
+   fi
+
+ fi
+
+ exit 0

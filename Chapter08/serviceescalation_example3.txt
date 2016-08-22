@@ -1,0 +1,11 @@
+define serviceescalation
+{
+  host_name             mainrouter
+  service_description   OpenVPN
+  first_notification    1
+  last_notification     0
+  contactgroups         CritSit
+  notification_period   holidays
+  notification_interval 30
+  escalation_options    w,c,r
+}

@@ -1,0 +1,5 @@
+define command
+{
+  command_name  check_nosmtp
+  command_line  $USER1$/negate $USER1$/check_smtp -H $HOSTADDRESS$
+}

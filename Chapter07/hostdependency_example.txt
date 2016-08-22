@@ -1,0 +1,6 @@
+define hostdependency
+  {
+    dependent_host_name            backupstorage-branch2
+    host_name                      vpnserver-branch1
+    dependency_period              maintenancewindows
+  }
