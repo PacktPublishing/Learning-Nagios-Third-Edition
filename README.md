@@ -20,7 +20,7 @@ You will see code something similler to the following:
 
 
 ##Related Nagios Products:
-* [Learning Nagios 3.0]https://www.packtpub.com/networking-and-servers/learning-nagios-30?utm_source=github&utm_medium=repository&utm_campaign=9781847195180)
+* [Learning Nagios 3.0](https://www.packtpub.com/networking-and-servers/learning-nagios-30?utm_source=github&utm_medium=repository&utm_campaign=9781847195180)
 * [Instant Nagios Starter](https://www.packtpub.com/networking-and-servers/instant-nagios-starter-instant?utm_source=github&utm_medium=repository&utm_campaign=9781782162506)
 * [Nagios Core Administration Cookbook - Second Edition](https://www.packtpub.com/networking-and-servers/nagios-core-administration-cookbook-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785889332)
 
