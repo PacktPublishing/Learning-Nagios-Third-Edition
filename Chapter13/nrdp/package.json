@@ -1,0 +1,8 @@
+{
+  "name": "nrdp_post",
+  "version": "0.0.1",
+  "dependencies": {
+    "request": "^2.73.0",
+    "xmlbuilder": "^8.2.2"
+  }
+}

@@ -1,0 +1,2 @@
+[/settings/external scripts/wrappings]
+js = C:\\Program Files\\nodejs\\node.exe scripts\\%SCRIPT% %ARGS%

@@ -1,0 +1,9 @@
+define service
+{
+  hostgroup_name         snmp-trap-receivers
+  service_description    TrapTest
+  is_volatile            1
+  max_check_attempts     1
+  active_checks_enabled  0
+  passive_checks_enabled 1
+}

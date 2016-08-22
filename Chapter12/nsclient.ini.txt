@@ -1,0 +1,27 @@
+[/modules]
+; NSClientServer - A server that listens for incoming check_nt connection and processes incoming requests.
+NSClientServer = enabled
+
+; NRPEServer - A server that listens for incoming NRPE connection and processes incoming requests.
+NRPEServer = enabled
+
+; CheckWMI - Check status via WMI
+CheckWMI = enabled
+; CheckSystem - Various system related checks, such as CPU load, process state, service state memory usage and PDH counters.
+CheckSystem = enabled
+
+; CheckExternalScripts - Execute external scripts
+CheckExternalScripts = enabled
+
+; CheckEventLog - Check for errors and warnings in the event log.
+CheckEventLog = enabled
+
+; CheckLogFile - File for checking log files and various other forms of updating text files
+CheckLogFile = enabled
+
+; CheckDisk - CheckDisk can check various file and disk related things.
+CheckDisk = enabled
+
+[/settings/default]
+password = QsCrvGnz13#
+allowed hosts = 192.168.0.0/24

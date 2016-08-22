@@ -1,0 +1,7 @@
+define service
+{
+  use                  generic-service
+  hostgroup_name       snmp-aware
+  service_description  Processes
+  check_command        check_snmp!HOST-RESOURCES-MIB::hrSystemProcesses.0!-w 0:250 –c 0:500
+}

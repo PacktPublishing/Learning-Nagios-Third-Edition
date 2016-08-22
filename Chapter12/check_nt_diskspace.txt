@@ -1,0 +1,5 @@
+define service{
+    host_name           windows210
+    service_description Disk usage – C:
+    check_command       check_nt!USEDDISKSPACE!-l C –w 80 –c 90
+    }

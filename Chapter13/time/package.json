@@ -1,0 +1,7 @@
+{
+  "name": "ntp_check",
+  "version": "0.0.1",
+  "dependencies": {
+    "ntp-client": "^0.5.3"
+  }
+}

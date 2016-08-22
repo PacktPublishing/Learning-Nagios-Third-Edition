@@ -1,0 +1,2 @@
+[/settings/external scripts/wrapped scripts]
+check_updates = check_updates.vbs

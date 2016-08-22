@@ -1,0 +1,5 @@
+define service{
+    host_name           windows210
+    service_description CPU Load
+    check_command       check_nrpe!check_cpu!-a "warn=load>80" "crit=load>90"
+    }

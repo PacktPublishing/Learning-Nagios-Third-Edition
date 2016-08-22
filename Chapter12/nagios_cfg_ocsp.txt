@@ -1,0 +1,2 @@
+obsess_over_services=1
+ocsp_command=send-ocsp

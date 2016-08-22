@@ -1,0 +1,5 @@
+define command
+{
+    command_name  send-ocsp
+    command_line  $USER1$/send-ocsp 192.168.0.1 $SERVICESTATE$ $HOSTNAME$ '$SERVICEDESC$' '$SERVICEOUTPUT$'
+}

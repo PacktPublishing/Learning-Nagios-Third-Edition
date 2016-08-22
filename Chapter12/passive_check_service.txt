@@ -1,0 +1,11 @@
+define service
+{
+  use                             generic-service
+  host_name                       linuxbox02
+  service_description             SSH
+  check_command                   no-passive-check-results
+  check_freshness                 1
+  freshness_threshold             43200
+  active_checks_enabled           1
+  passive_checks_enabled          1
+}

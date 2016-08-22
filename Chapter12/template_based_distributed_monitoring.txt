@@ -1,0 +1,61 @@
+define host{
+    use                         branch1-server
+    host_name                   branch1:webserver
+    hostgroups                  branch1-servers
+    address                     192.168.0.1
+    }
+
+define host{
+    register                    0
+    use                         generic-server
+    name                        branch1-server
+    contact_groups              branch1-admins
+    obsess_over_host            1
+    }
+
+define host{
+    register                    0
+    use                         remote-server
+    name                        branch1-server
+    contact_groups              branch1-admins
+    }
+
+define host{
+    register                    0
+    use                         generic-server
+    name                        remote-server
+    active_checks_enabled       0
+    passive_checks_enabled      1
+    notifications_enabled       0
+    }
+
+define service{
+    use                         branch1-service,service-http
+    host_name                   branch1:webserver
+    service_description         HTTP
+    }
+
+define service{
+    register                    0
+    name                        branch1-service
+    contact_groups              branch1-admins
+    obsess_over_service         1
+    }
+
+define service{
+    register                    0
+    name                        branch1-service
+    use                         remote-service
+    contact_groups              branch1-admins
+    }
+
+define service{
+    register                    0
+    name                        remote-service
+    active_checks_enabled       0
+    check_freshness             1
+    freshness_threshold         43200
+    check_command               check_dummy!3!No recent passive check result
+    notification_options        u
+    event_handler_enabled       0
+    }

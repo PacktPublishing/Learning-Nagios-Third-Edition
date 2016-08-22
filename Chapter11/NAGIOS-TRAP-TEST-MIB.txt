@@ -1,0 +1,19 @@
+NAGIOS-TRAP-TEST-MIB DEFINITIONS ::= BEGIN
+       IMPORTS enterprises FROM SNMPv2-SMI;
+
+ nagiostests OBJECT IDENTIFIER ::= { enterprises 0 }
+ nagiostraps OBJECT IDENTIFIER ::= { nagiostests 1 }
+ nagiosnotifs OBJECT IDENTIFIER ::= { nagiostests 2 }
+
+ nagiosTrap TRAP-TYPE
+       ENTERPRISE nagiostraps
+       VARIABLES { sysLocation }
+       DESCRIPTION "SNMPv1 notification"
+       ::= 1
+
+ nagiosNotif NOTIFICATION-TYPE
+       OBJECTS { sysLocation }
+       STATUS current
+       DESCRIPTION "SNMPv2c notification"
+       ::= { nagiosnotifs 2 }
+ END

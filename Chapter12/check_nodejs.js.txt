@@ -1,0 +1,2 @@
+console.log("Hello from Node.js version " + process.versions.node);
+process.exit(0);

@@ -1,0 +1,2 @@
+[/settings/external scripts/wrapped scripts]
+check_nodejs = check_nodejs.js

@@ -1,0 +1,5 @@
+define command
+{
+    command_name  send-ochp
+    command_line  $USER1$/send-ochp 192.168.0.1 $HOSTSTATE$  $HOSTNAME$ '$HOSTOUTPUT$'
+}

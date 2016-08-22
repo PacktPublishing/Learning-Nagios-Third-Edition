@@ -1,0 +1,13 @@
+[/settings/external scripts/wrappings]
+
+; POWERSHELL WRAPPING -
+ps1 = cmd /c echo scripts\\%SCRIPT% %ARGS%; exit($lastexitcode) | powershell.exe -command -
+
+; BATCH FILE WRAPPING -
+bat = scripts\\%SCRIPT% %ARGS%
+
+; VISUAL BASIC WRAPPING -
+vbs = cscript.exe //T:30 //NoLogo scripts\\lib\\wrapper.vbs %SCRIPT% %ARGS%
+
+; NodeJS wrapping
+js = C:\\Program Files\\nodejs\\node.exe scripts\\%SCRIPT% %ARGS%

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# args: nrdp-server hostname svcname output
+
+URL=http://$1/nrdp/
+TOKEN=cu8Eiquasoomeiphahpa
+
+# map status to exit code
+STATE=3
+case "$2" in
+  UP)
+    STATE=0
+    ;;
+  DOWN)
+    STATE=1
+    ;;
+  UNREACHABLE)
+    STATE=2
+    ;;
+esac
+
+/opt/nagios/bin/send_nrdp.php \
+  --url=$URL -–token=$TOKEN –host="$3" \
+  --state=$STATE –-output="$4"
+
+exit 0

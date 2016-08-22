@@ -1,0 +1,5 @@
+define service{
+    host_name           windows210
+    service_description Node.js sample service
+    check_command       check_nrpe!check_nodejs
+    }

@@ -1,0 +1,5 @@
+define service{
+    host_name           windows210
+    service_description requiredapp is running
+    check_command       check_nrpe!check_wmi!-a "query=Select ProcessId FROM Win32_Process WHERE Caption='requiredapp.exe'" "crit=count<1"
+    }

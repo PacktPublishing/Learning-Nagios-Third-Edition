@@ -1,0 +1,5 @@
+define command
+{
+  command_name check_snmp
+  command_line $USER1$/check_snmp –P 1 –H $HOSTADDRESS$ -o $ARG1$ $ARG2$
+}

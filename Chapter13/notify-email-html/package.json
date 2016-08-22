@@ -1,0 +1,8 @@
+{
+  "name": "notify-email-html",
+  "version": "0.0.1",
+  "dependencies": {
+    "handlebars": "^4.0.5",
+    "emailjs": "^1.0.5"
+  }
+}

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+CMD=/var/nagios/rw/nagios.cmd
+
+read ORIGHOSTNAME
+read ORIGIP
+# parse IP address
+IPADDR=`echo "$ORIGIP" | sed 's,^...: \[,,;s,\]:.*$,,'`
+HOST=""
+
+# map IP address of the trap to host and service for which
+# the check result should be sent as
+case $IPADDR in
+  192.168.2.52)
+    HOST=ubuntu2
+    SVC=TrapTest
+    ;;
+  esac
+
+if [ "x$HOST" = "x" ] ; then
+  exit 1
+fi
+
+# send check result to Nagios
+CLK=`date +%s`
+echo "[$CLK] PROCESS_SERVICE_CHECK_RESULT;$HOST;$SVC;2;Trap received"
+
+exit 0

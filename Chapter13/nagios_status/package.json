@@ -1,0 +1,7 @@
+{
+  "name": "nagios_parse",
+  "version": "0.0.1",
+  "dependencies": {
+    "nagios-status-parser": "^0.0.1"
+  }
+}

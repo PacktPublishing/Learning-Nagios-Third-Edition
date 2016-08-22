@@ -1,0 +1,2 @@
+obsess_over_hosts=1
+ochp_command=send-ochp
