@@ -1,5 +1,5 @@
 # Learning Nagios Third Edition
-This is the code repository for [Learning Nagios Third Edition](https://www.packtpub.com/networking-and-servers/learning-nagios-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785885952) By Packt Publishing. It contains all the supporting project files necessary to work through the book from start to finish.
+This is the code repository for [Learning Nagios Third Edition](https://www.packtpub.com/networking-and-servers/learning-nagios-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785885952) By Packt. It contains all the supporting project files necessary to work through the book from start to finish.
 
 ##Instructions and Navigation
 All of the code is organized into folders. Each folder starts with number followed by the application name. For example, Chapter 02.
