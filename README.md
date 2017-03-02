@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Learning-Nagios-Third-Edition.svg)](https://github.com/PacktPublishing/Learning-Nagios-Third-Edition/issues)   [![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Learning-Nagios-Third-Edition.svg)](https://github.com/PacktPublishing/Learning-Nagios-Third-Edition/network)   [![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Learning-Nagios-Third-Edition.svg)](https://github.com/PacktPublishing/Learning-Nagios-Third-Edition/stargazers)   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PacktPublishing/Learning-Nagios-Third-Edition/master/LICENSE)
+
 # Learning Nagios Third Edition
 This is the code repository for [Learning Nagios Third Edition](https://www.packtpub.com/networking-and-servers/learning-nagios-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785885952) By Packt. It contains all the supporting project files necessary to work through the book from start to finish.
 
